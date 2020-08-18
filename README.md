@@ -2,6 +2,8 @@
 
 Solutions for magic squares includes all three types: odd, singly even and doubly even orders.
 
+Solutions in [Python](./python3), [JavaScript](./javascript) and [Go](./golang).
+
 ## Big O
 
 - Time: O(n^2) because we visit all n*n cells at most 2 times.
@@ -9,14 +11,14 @@ Solutions for magic squares includes all three types: odd, singly even and doubl
 
 ## Python
 
-Here, to make things simple, I just have a single test file and you can execute it with:
+Here, to keep things simple, I just have a single test file and you can execute it with:
 ```bash
 $ python3 test_solution.py
 ```
 
 ## JavaScript
 
-You can use `mocha` and `chai` to do your unit tests. Here, to make things simple, I just import functions into a test file and you can execute it with:
+Here, to keep things simple, I just have a single test file and you can execute it with:
 ```bash
 $ node solution.test.js
 ```
