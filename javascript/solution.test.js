@@ -1,7 +1,7 @@
 const {fillMatrix} = require('./solution');
 
 /**
- * Odd order Magic Square. Example: 3,5,7,… (2*n +1)
+ * Odd order Magic Square. Example: 3,5,7,... (2*n +1)
  */
 function testOddOrder() {
     const oddOrderTests = [3,5,7];
@@ -64,6 +64,7 @@ function isCorrect(matrix) {
         }
         if (sumOf(colArr) !== targetSum) return false;
     }
+
     const topLeftBottomRight = [];
     for (let i = 0; i < n; i++) {
         for (let j = 0; j < n; j++) {
@@ -71,6 +72,7 @@ function isCorrect(matrix) {
         }
     }
     if (sumOf(topLeftBottomRight) !== targetSum) return false;
+
     const topRightBottomLeft = [];
     for (let i = 0; i < n; i++) {
         for (let j = n - 1; j >= 0; j--) {
@@ -78,6 +80,7 @@ function isCorrect(matrix) {
         }
     }
     if (sumOf(topRightBottomLeft) !== targetSum) return false;
+    
     return true;
 }
 

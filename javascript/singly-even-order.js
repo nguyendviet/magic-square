@@ -24,7 +24,7 @@ function fillSinglyEvenOrder(magicSquare, n) {
 
     const shiftCol = (n/2 - 1)/2;
     let i, j;
-    // Exchange left quarters:
+    // Exchange columns in left quarters:
     for (i = 0; i < Math.floor(n/2); i++) {
         for (j = 0; j < shiftCol; j++) {
             // If we're at middle row of top left quarter, shift 1 to the right:
@@ -34,8 +34,7 @@ function fillSinglyEvenOrder(magicSquare, n) {
             else exchangeCell(i, j, magicSquare);
         }
     }
-    // Exchange right quarters
-    // Note: n = 6, column to shift 
+    // Exchange columns right quarters if n > 6:
     for (i = 0; i < Math.floor(n/2); i++) {
         for (j = n - 1; j > n - shiftCol; j--) {
             exchangeCell(i, j, magicSquare);
@@ -61,17 +60,18 @@ function fillQuarterOfSinglyEvenOrder(magicSquare, firstRow, lastRow, firstCol, 
 
     // One by one put all values in magic square 
     while(num <= lastNum) { 
-        // 3rd condition:
+        // 4th condition:
         if (i < firstRow && j >= lastCol) { 
             i += 2; 
             j--; 
         } 
-        // 1st condition:
+        // 2nd condition:
         // If next number goes to out of square's right side 
         if (j >= lastCol) j = firstCol; 
+        // 1st condition:
         // If next number goes to out of square's upper side 
         if (i < firstRow) i = lastRow - 1; 
-        // 2nd condition:
+        // 3rd condition:
         if (magicSquare[i][j] !== 0) { 
             i += 2; 
             j--; 
