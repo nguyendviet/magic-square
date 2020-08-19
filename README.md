@@ -9,7 +9,7 @@ Solutions in [Python](./python3/README.md), [JavaScript](./javascript/README.md)
 - Time: O(n^2) because we visit all n*n cells at most 2 times.
 - Space: O(n^2) because we need n*n space for the matrix. Each helper method that constructs the matrix doesn't use extra space so each takes O(1). They just fill numbers into the matrix.
 
-Here, to keep things simple, I just have a single test file. Once you're in the folder with the test file, you can execute it with:
+Here, to keep things simple, I just have a single test file for each language. Once you're in the folder with the test file, you can execute it with:
 
 **Python**
 ```bash
