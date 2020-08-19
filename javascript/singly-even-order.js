@@ -96,10 +96,10 @@ function fillQuarterOfSinglyEvenOrder(magicSquare, firstRow, lastRow, firstCol, 
  */
 function exchangeCell(i, j, matrix) {
     const n = matrix.length;
-    const rowToExchange = Math.floor(n/2) + i;
+    const r = Math.floor(n/2) + i;
     const temp = matrix[i][j];
-    matrix[i][j] = matrix[rowToExchange][j];
-    matrix[rowToExchange][j] = temp;
+    matrix[i][j] = matrix[r][j];
+    matrix[r][j] = temp;
 }
 
 module.exports = {fillSinglyEvenOrder};

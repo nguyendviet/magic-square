@@ -50,7 +50,7 @@ function testSinglyEvenOrder() {
  */
 function isCorrect(matrix) {
     const n = matrix.length;
-    // Partial sums formula: n*(n+1)/2, here is n*n:
+    // Partial sums formula: n*(n+1)/2, here is n*n*(n*n + 1)/2:
     const totalSum = n*n*(n*n + 1) / 2;
     const targetSum = totalSum / n;
     for (let i = 0; i < n; i++) {

@@ -34,7 +34,7 @@ def testSinglyEvenOrder():
 # diagonal = total sum / n
 def isCorrect(matrix):
     n = len(matrix)
-    # Partial sums formula: n*(n+1)/2, here is n*n:
+    # Partial sums formula: n*(n+1)/2, here is n*n*(n*n + 1)/2:
     totalSum = n*n*(n*n + 1) / 2
     targetSum = totalSum / n
     for i in range(n):
