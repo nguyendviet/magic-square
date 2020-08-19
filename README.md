@@ -2,7 +2,7 @@
 
 Solutions for magic squares include all three types: odd, singly even and doubly even orders.
 
-Solutions in [Python](./python3/README.md), [JavaScript](./javascript/README.md) and [Go](./golang/README.md).
+Solutions in [Python](./python3), [JavaScript](./javascript) and [Go](./golang).
 
 ## Big O
 
