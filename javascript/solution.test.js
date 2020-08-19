@@ -95,11 +95,7 @@ function printMatrix(matrix) {
     const targetSum = totalSum / n;
     console.log("n =", n);
     console.log("Sum of each row, column or diagonal:", targetSum);
-    const numSize = (n*n).toString().length;
     for (let i = 0; i < n; i++) {
-        const rowStr = matrix[i].map((num) => num.toString().padStart(numSize, " "));
-        // Beaufify small output:
-        // console.log(rowStr);
         console.log(matrix[i]);
     }
     for (let i = 0; i < n; i++) {
@@ -138,23 +134,6 @@ function printMatrix(matrix) {
  */
 function sumOf(arr) {
     return arr.reduce((a, b) => a + b, 0);
-}
-
-/**
- * Helper method checks if 2 matrices are the same.
- * @param {number[][]} matrix1 
- * @param {nuber[][]} matrix2 
- * @returns {boolean}
- */
-function equal(matrix1, matrix2) {
-    for (let i = 0; i < matrix1.length; i++) {
-        for (let j = 0; j < matrix1[0].length; j++) {
-            if (matrix1[i][j] !== matrix2[i][j]) {
-                return false;
-            }
-        }
-    }
-    return true;
 }
 
 (function() {
